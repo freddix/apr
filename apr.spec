@@ -1,12 +1,12 @@
 Summary:	Apache Portable Runtime
 Name:		apr
-Version:	1.4.8
+Version:	1.5.0
 Release:	1
 Epoch:		1
 License:	Apache v2.0
 Group:		Libraries
 Source0:	http://www.apache.org/dist/apr/%{name}-%{version}.tar.bz2
-# Source0-md5:	ce2ab01a0c3cdb71cf0a6326b8654f41
+# Source0-md5:	cc93bd2c12d0d037f68e21cc6385dc31
 URL:		http://apr.apache.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
