@@ -1,12 +1,13 @@
+# based on PLD Linux spec git://git.pld-linux.org/packages/apr.git
 Summary:	Apache Portable Runtime
 Name:		apr
-Version:	1.5.0
+Version:	1.5.1
 Release:	1
 Epoch:		1
 License:	Apache v2.0
 Group:		Libraries
 Source0:	http://www.apache.org/dist/apr/%{name}-%{version}.tar.bz2
-# Source0-md5:	cc93bd2c12d0d037f68e21cc6385dc31
+# Source0-md5:	5486180ec5a23efb5cae6d4292b300ab
 URL:		http://apr.apache.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -53,14 +54,15 @@ Header files and development documentation for apr.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} -j1 install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 ln -snf /usr/bin/libtool $RPM_BUILD_ROOT%{_datadir}/build
 
-%if 0
-%{__make} -j check
-%endif
+%check
+%{__make} -j1 check
 
 %clean
 rm -rf $RPM_BUILD_ROOT
