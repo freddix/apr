@@ -1,13 +1,13 @@
 # based on PLD Linux spec git://git.pld-linux.org/packages/apr.git
 Summary:	Apache Portable Runtime
 Name:		apr
-Version:	1.5.1
+Version:	1.5.2
 Release:	1
 Epoch:		1
 License:	Apache v2.0
 Group:		Libraries
 Source0:	http://www.apache.org/dist/apr/%{name}-%{version}.tar.bz2
-# Source0-md5:	5486180ec5a23efb5cae6d4292b300ab
+# Source0-md5:	4e9769f3349fe11fc0a5e1b224c236aa
 URL:		http://apr.apache.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
